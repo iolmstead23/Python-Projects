@@ -6,9 +6,9 @@ class Man:
     y = 0
 
     def __init__(self,image,startx,starty):
+        self.image = pygame.image.load(image)
         self.x = startx
         self.y = starty
-        self.image = pygame.image.load(image)
 
     def move(self,movex,movey):
         self.x = self.x + movex
@@ -30,7 +30,7 @@ gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('Manhunt')
 clock = pygame.time.Clock()
 
-man = Man('man.png', display_width * 0.45, display_height * 0.8)
+man = Man('man.png', display_width / 2, display_height / 2)
 
 end = False
 
